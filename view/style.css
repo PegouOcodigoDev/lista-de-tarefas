@@ -5,21 +5,26 @@ body {
     align-items: center;
     flex-direction: column;
     font-family: Courier New, Arial, sans-serif;
+
+    background-color: #F5F5DC;
 }
 
 .header {
-    margin: 5px;
-    font-size: 1.5em;
-    display: block;
+    font-size: 0.9em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     width: 100%;
     text-align: center;
-    background-color: #696969;
+    background: linear-gradient(to right, #00BFFF, #1E90FF);
     color: white;
-    box-shadow: 0 0 2px black;
+    box-shadow: 0 0 0.6em black;
 }
 
 .search-area {
-    margin: 5px;
+    margin-top: 6em;
+    margin-bottom: 2em;
     width: 55%;
 }
 
@@ -35,15 +40,21 @@ body {
     border-radius: 5px;
     height: 2em;
     font-size: 0.9em;
+    background-color: #FFFAFA;
+    cursor: pointer;
 }
 
 .search-area form button {
-    border: solid 2.5px black;
-    background-color: black;
+    border: solid 2.5px #1C1C1C;
+    background-color: #1C1C1C;
     color: white;
     font-size: 0.9em;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.search-area form button:hover{
+    box-shadow: 0 0 0 1px #1C1C1C;
 }
 
 .list-box {
@@ -56,21 +67,23 @@ body {
 .task {
     padding: 4px;
     margin: 8px;
-    border: solid 1px grey;
+    border: solid 2px #1C1C1C;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
-    box-shadow: 0 0 2px;
     border-radius: 4px;
     overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.task input{
+.task input[type="checkbox"]{
     margin-right: 1.0em;
     width: 1.4em;
     height: 1.4em;
+    cursor: pointer;
 }
 
 .space{

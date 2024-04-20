@@ -4,6 +4,12 @@ let tasks = document.querySelectorAll(".task");
 
 let state = [];
 
+function capitalizeWords(str) {
+    return str.replace(/\b\w/g, function(char) {
+        return char.toUpperCase();
+    });
+}
+
 function createTask(content) {
     const taskHTML = `<div class="task">
         <p>${content}</p>
@@ -21,9 +27,9 @@ function addTask(event) {
     }
     event.preventDefault();
     if(taskBar.value){
-    createTask(taskBar.value.trim());
+    createTask(capitalizeWords(taskBar.value.trim()));
     state.push({
-        description: taskBar.value.trim(),
+        description: capitalizeWords(taskBar.value.trim()),
         checked: false,
     });
     taskBar.value = "";
@@ -53,9 +59,19 @@ function sortTask() {
         listBox.appendChild(task);
     });
 }
-function update() {
+function updateCheckbox() {
     tasks.forEach((task, index) => {
         const checkbox = task.querySelector("input[type='checkbox']");
         checkbox.checked = state[index].checked;
     });
+}
+
+function deleteTask(task) {
+    listBox.removeChild(task);
+
+    tasks = document.querySelectorAll(".task");
+    const taskIndex = Array.from(tasks).indexOf(task);
+    if (taskIndex !== -1) {
+        state.splice(taskIndex, 1);
+    }
 }
