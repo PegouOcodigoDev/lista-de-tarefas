@@ -15,13 +15,19 @@ function createTask(content) {
 }
 
 function addTask(event) {
+    if (tasks.length == 0 && taskBar.value){
+        const space = document.querySelector(".space");
+        space.remove();
+    }
     event.preventDefault();
-    createTask(taskBar.value);
+    if(taskBar.value){
+    createTask(taskBar.value.trim());
     state.push({
-        description: taskBar.value,
+        description: taskBar.value.trim(),
         checked: false,
     });
     taskBar.value = "";
+}
 }
 
 function sortTask() {
@@ -47,7 +53,6 @@ function sortTask() {
         listBox.appendChild(task);
     });
 }
-
 function update() {
     tasks.forEach((task, index) => {
         const checkbox = task.querySelector("input[type='checkbox']");

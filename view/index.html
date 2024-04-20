@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ahYdYFHACyYV4X5kRN5ezmf2JFZsNKFsAP5gXTHv5v+uC0roCXT8x3RJ5xIR6kxcPkJp4FQlsScV+g5tV3ab7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Lista de tarefas</title>
 </head>
 
@@ -17,12 +16,14 @@
 
     <div class="search-area">
         <form>
-            <input id="task-bar" type="text" placeholder="Adicione sua tarefa..." maxlength="34">
-            <button onclick="addTask(event); update(); sorttTask();">Adicionar</button>
+            <input id="task-bar" type="text" placeholder="Adicione uma nova tarefa..." maxlength="35">
+            <button onclick="addTask(event); update(); sortTask();">Adicionar</button>
         </form>
     </div>
 
     <div class="list-box"></div>
+
+    <h2 class="space">Insira suas tarefas</h2>
 
     <script src="script.js"></script>
 

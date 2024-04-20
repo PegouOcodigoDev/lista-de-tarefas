@@ -33,7 +33,7 @@ body {
     width: 85%;
     border: solid 2.5px black;
     border-radius: 5px;
-    height: 1.7em;
+    height: 2em;
     font-size: 0.9em;
 }
 
@@ -71,4 +71,9 @@ body {
     margin-right: 1.0em;
     width: 1.4em;
     height: 1.4em;
+}
+
+.space{
+    margin: 4em;
+    color: #696969;
 }
