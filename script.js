@@ -13,7 +13,10 @@ function capitalizeWords(str) {
 function createTask(content) {
     const taskHTML = `<div class="task">
         <p>${content}</p>
+        <div>
+        <button onclick="deleteTask()"><i class="fa-regular fa-trash-can"></i></button>
         <input onchange="sortTask()" type="checkbox">
+        </div>
     </div>`;
 
     listBox.innerHTML += taskHTML;
