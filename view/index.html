@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ahYdYFHACyYV4X5kRN5ezmf2JFZsNKFsAP5gXTHv5v+uC0roCXT8x3RJ5xIR6kxcPkJp4FQlsScV+g5tV3ab7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lista de tarefas</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Lista de tarefas</h1>
+    </div>
+
+    <div class="search-area">
+        <form>
+            <input id="task-bar" type="text" placeholder="Adicione sua tarefa...">
+            <button onclick="addTask(event); update(); sorttTask();">Adicionar</button>
+        </form>
+    </div>
+
+    <div class="list-box"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
